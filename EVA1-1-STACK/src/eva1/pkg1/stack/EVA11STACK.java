@@ -7,7 +7,7 @@ package eva1.pkg1.stack;
 
 /**
  *
- * @author Jesùs Alejandro Torres Ramìrez
+ * @author Jesús Alejandro Torres Ramírez
  */
 public class EVA11STACK {
 
@@ -16,25 +16,25 @@ public class EVA11STACK {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-     sout("INICIA MAIN")
+        System.out.println("INICIA MAIN");
         
      A();
-        "RETOMA EJECUCIÒN MAIN"
-        "TERMINA MAIN"
+        System.out.println("RETOMA EJECUCIÒN MAIN");
+        System.out.println("TERMINA MAIN");
     }
 
     public static void A() {
-        sysout("INICIA A")
+        System.out.println("INICIA A");
         B();
-        "RETOMA A"
-            "TERMINA A"
+        System.out.println("RETOMA A");
+        System.out.println("TERMINA A");
     }
 
     public static void B() {
-        "INICIA B"
+        System.out.println("INICIA B");
         int i = 1;
         double d = 10.0;
-        "TERMINA B"
+        System.out.println("TERMINA B");
 
     }
 

@@ -7,7 +7,7 @@ package eva1.pkg2.stackoverflow;
 
 /**
  *
- * @author Jesùs Alejandro Torres Ramìrez 
+ * @author Jesús Alejandro Torres Ramírez 
  */
 public class EVA12STACKOVERFLOW {
 
