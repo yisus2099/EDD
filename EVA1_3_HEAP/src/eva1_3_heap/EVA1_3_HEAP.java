@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package eva_3_heap;
+package eva1_3_heap;
 
 /** En Java las direcciones de memoria se les llama referencias
  *
  * @author Jesús Alejandro Torres Ramírez
  */
-public class EVA_3_HEAP {
+public class EVA1_3_HEAP {
 
     /**
      * @param args the command line arguments
