@@ -31,7 +31,7 @@ public class EVA1_10_ARREGLO_CUBO {
           for (int i = 0; i < cuboDatos.length; i++) {
             for (int j = 0; j < cuboDatos[i].length; j++) {
                 for (int k = 0; k < cuboDatos[i][j].length; k++) {
-                    System.out.print("[" + cuboDatos[i][j] + "]");
+                    System.out.print("[" + cuboDatos[i][j][k] + "]");
                 }
                 
                 
