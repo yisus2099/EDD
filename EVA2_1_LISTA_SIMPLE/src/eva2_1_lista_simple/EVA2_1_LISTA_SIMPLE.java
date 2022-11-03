@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package eva2_1_lista_simple;
 
 /**
@@ -23,7 +18,7 @@ public class EVA2_1_LISTA_SIMPLE {
         miLista.agregar(40);//3
         miLista.agregar(50);//4
         miLista.agregar(60);//5
-        System.out.println("Cantidad de nodos:  " + miLista.tamLista());
+        System.out.println("Cantidad de nodos:  " + miLista.tamaLista());
         miLista.imprimir();
         try {
             miLista.InsertarEn(70, 3);
