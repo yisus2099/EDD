@@ -13,13 +13,13 @@ public class Lista {
 
     private Nodo inicio;
     private Nodo fin;
-    private int cont = 0;
+    private int cont;
 
-    //POR DEFAULT LA LISTA ESTA VACIA
+  
     public Lista() {
-        this.inicio = null;//NO HAY NODOS EN LA LISTA
+        this.inicio = null;//No hay nodos en la lista
         this.fin = null;
-        this.cont = 0;
+        this.cont=0;//No hay nodos en la lista
     }
 
 //Lista esta vacía
@@ -38,7 +38,8 @@ public class Lista {
             Nodo temp = inicio;
             //Mover temp hasta que llegue al nodo final
             while (temp != null) {
-                System.out.print(" [" + temp.getValor() + "] ");
+                System.out.println(" [" + temp.getValor() + "] ");
+               temp = temp.getSiguiente(); //Final de la lista
             }
         }
         System.out.println("");
@@ -47,7 +48,7 @@ public class Lista {
     //Método para agregar nodos
     public void agregar(int valor) {
         Nodo newNodo = new Nodo(valor);
-
+        
         if (inicio == null) {//No hay nodos en la lista
             inicio = newNodo;
             fin = newNodo;
@@ -71,24 +72,19 @@ public class Lista {
     }
 
     public int tamaLista() {
-        return this.cont++;
+        return this.cont;
     }
 
 //Insertar en posisiciones no validads
     public void InsertarEn(int valor, int pos) throws Exception {
-
-        int cantNodos = tamaLista();
-        Nodo newNodo = new Nodo(valor);
-
-        //que debemos validar
-        //Insertar algo en una posicion no valida
-        //Posiciones mayores a  la cantidad de elementos
-        //Posiciones negativas
+        
         if (pos < 0) {
             throw new Exception("No es posible insertar en  posiciones negativa");
-        } else if (pos >= cantNodos) {
+        } else if (pos >= tamaLista()) {
             throw new Exception(pos + "No es una posicion valida en la lista");
         } else {
+            Nodo newNodo = new Nodo(valor);
+              //Se aumenta el contador debido a la creacion del nuevo nodo
             if (pos == 0) {//Inserta al inicio de la lista
                 newNodo.setSiguiente(inicio);
                 inicio = newNodo;
@@ -96,8 +92,8 @@ public class Lista {
             } else { //Inserta en otra posicion 
                 Nodo temp = inicio;
                 int cont = 0;
-
-                //Mover temp hasta llegar al nodo que queramos
+                
+                //Mover temp por cada nodo hasta llegar al nodo deseado
                 while (cont < (pos - 1)) {
                     temp = temp.getSiguiente();
                     cont++;
@@ -106,6 +102,7 @@ public class Lista {
                 newNodo.setSiguiente(temp.getSiguiente());
                 temp.setSiguiente(newNodo);
             }
+            this.cont++;
         }
 
     }

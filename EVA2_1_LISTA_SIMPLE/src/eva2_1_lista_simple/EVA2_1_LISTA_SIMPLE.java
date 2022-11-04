@@ -41,14 +41,24 @@ public class EVA2_1_LISTA_SIMPLE {
         miLista2.agregar(8);
         miLista2.agregar(9);
         miLista2.agregar(10);
-                
-        System.out.println("Lista: ");
-                System.out.println("Primera lista");
-                miLista1.imprimir();
-                System.out.println("Segunda Lista");
-                miLista2.imprimir();
-        
 
+        System.out.println("Lista: ");
+        System.out.println("Primera lista");
+        miLista1.imprimir();
+        System.out.println("Segunda Lista");
+        miLista2.imprimir();
+
+        /*
+         // Agregamos grandes cantidades de datos
+         for (int i = 0; i < 100; i++) { // O(N2)
+         miLista1.agregar(i);
+         } 
+         */
+        System.out.println("Contar nodos: ");
+        System.out.println("Primera lista");
+        miLista1.tamaLista();
+        System.out.println("Segunda Lista");
+        miLista2.tamaLista();
 
     }
 
