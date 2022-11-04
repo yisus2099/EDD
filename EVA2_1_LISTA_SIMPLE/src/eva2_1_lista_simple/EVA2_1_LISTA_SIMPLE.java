@@ -21,19 +21,34 @@ public class EVA2_1_LISTA_SIMPLE {
     public static void main(String[] args) {
         // TODO code application logic here
         Lista miLista1 = new Lista();
-        miLista.agregar(10);//0
-        miLista.agregar(20);//1
-        miLista.agregar(30);//2
-        miLista.agregar(40);//3
-        miLista.agregar(50);//4
-        miLista.agregar(60);//5
-        System.out.println("Cantidad de nodos:  " + miLista.tamaLista());
-        miLista.imprimir();
-        try {
-            miLista.InsertarEn(70, 3);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+        Lista miLista2 = new Lista();
+
+        //Elementos de la lista
+        miLista1.agregar(10);//0
+        miLista1.agregar(20);//1
+        miLista1.agregar(30);//2
+        miLista1.agregar(40);//3
+        miLista1.agregar(50);//4
+        miLista1.agregar(60);//5
+
+        miLista2.agregar(1);
+        miLista2.agregar(2);
+        miLista2.agregar(3);
+        miLista2.agregar(4);
+        miLista2.agregar(5);
+        miLista2.agregar(6);
+        miLista2.agregar(7);
+        miLista2.agregar(8);
+        miLista2.agregar(9);
+        miLista2.agregar(10);
+                
+        System.out.println("Lista: ");
+                System.out.println("Primera lista");
+                miLista1.imprimir();
+                System.out.println("Segunda Lista");
+                miLista2.imprimir();
+        
+
 
     }
 
