@@ -4,6 +4,15 @@ package eva2_1_lista_simple;
  *
  * @author Jesús Alejandro Torres Ramírez
  */
+
+/*
+ Usar dos clase:
+ -Clase nodo:
+    Tipo de dato, referencia
+ - Clase lista:
+    Agregar un nuevo nodo
+ Agregar un nodo al final de la lista.
+ */
 public class EVA2_1_LISTA_SIMPLE {
 
     /**
@@ -11,7 +20,7 @@ public class EVA2_1_LISTA_SIMPLE {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Lista miLista = new Lista();
+        Lista miLista1 = new Lista();
         miLista.agregar(10);//0
         miLista.agregar(20);//1
         miLista.agregar(30);//2

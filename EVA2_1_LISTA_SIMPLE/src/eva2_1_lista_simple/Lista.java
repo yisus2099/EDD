@@ -21,7 +21,7 @@ public class Lista {
         this.fin = null;
         this.cont = 0;
     }
-    
+
 //Lista esta vacía
     public boolean listaVacia() {
         if (inicio == null) {
@@ -32,19 +32,19 @@ public class Lista {
     }
 
     public void imprimir() {
-     if (listaVacia()) {
+        if (listaVacia()) {
             System.out.print("Lista vacía -");
-        }else{
+        } else {
             Nodo temp = inicio;
             //Mover temp hasta que llegue al nodo final
-            while(temp != null){
+            while (temp != null) {
                 System.out.println(" [" + temp.getValor() + "] ");
             }
         }
-            System.out.println("");
+        System.out.println("");
     }
 
-  //Método para agregar nodos
+    //Método para agregar nodos
     public void agregar(int valor) {
         Nodo newNodo = new Nodo(valor);
 
@@ -76,15 +76,14 @@ public class Lista {
 
 //Insertar en posisiciones no validads
     public void InsertarEn(int valor, int pos) throws Exception {
-        
+
         int cantNodos = tamaLista();
         Nodo newNodo = new Nodo(valor);
-        
+
         //que debemos validar
         //Insertar algo en una posicion no valida
         //Posiciones mayores a  la cantidad de elementos
         //Posiciones negativas
-        
         if (pos < 0) {
             throw new Exception("No es posible insertar en  posiciones negativa");
         } else if (pos >= cantNodos) {
@@ -97,7 +96,7 @@ public class Lista {
             } else { //Inserta en otra posicion 
                 Nodo temp = inicio;
                 int cont = 0;
-                
+
                 //Mover temp hasta llegar al nodo que queramos
                 while (cont < (pos - 1)) {
                     temp = temp.getSiguiente();
@@ -113,70 +112,65 @@ public class Lista {
 
     //Metodo para limpiar toda la lista
     public void Limpiar() {
-        inicio =null;
-        fin =null;
-        cont=0;
+        inicio = null;
+        fin = null;
+        cont = 0;
     }
-    
+
     //Eliminar segun la posicion en la lista
     public void BorrarEn(int pos) throws Exception {
-        int  valorNodos = tamaLista();
-        int cont = 0 ;
+        int valorNodos = tamaLista();
+        int cont = 0;
         Nodo temp = inicio;
-     
+
         if (pos < 0) { //Posicion negativa
             throw new Exception("No se pueden eliminar nodos de porsiciones negativas");
         } else if (pos >= valorNodos) {//Posciones mas altas que las que tenemos
             throw new Exception("Esa posicion no es válida en la lista");
         } else {
-            if(valorNodos == 1){
+            if (valorNodos == 1) {
                 Limpiar();
             } else {
                 if (pos == 0) {
                     inicio = inicio.getSiguiente();
-                }else {
+                } else {
                     //Mover temp por cada nodo hasta llegar al que queremos
-                    while(cont < (pos -1)){
+                    while (cont < (pos - 1)) {
                         temp = temp.getSiguiente();
                         cont++;
-                    } 
+                    }
                     Nodo objNext = temp.getSiguiente();
                     temp.setSiguiente(objNext.getSiguiente());
-                    
-                    if(pos == (valorNodos - 1)){//Cantodad de los nodos menos el que desconectamos
+
+                    if (pos == (valorNodos - 1)) {//Cantodad de los nodos menos el que desconectamos
                         fin = temp; //Reconectar a fin
                     }
                 }
             }
             this.cont--;
         }
-        
+
     }
-    
-}
 
+    public int getValueAt(int pos) throws Exception {
 
-
-
-/*
-   //Evaluar si la posicion para eliminar es  valida
-        if ((inicio == null)) {
-            throw new Exception("No es posible eliminar elementos en posiciones negativas");
-             }
-        else {
-            //No elimianr en posiciones negativas
-            if ((pos < 0)) {
-                throw new Exception("No es posible eliminar elementos en posiciones negativas");
-            }else if(pos > tamaLista()){
-                throw new Exception("No hay un elemento en la posicon asignada");
+        int valueNodes = tamaLista();
+        int cont = 0, valor = 0;
+        Nodo temp = inicio;
+        if (pos < 0) {
+            throw new Exception("No se pueden agregar ndos a posiciones negativas");
+        } else if (pos >= valueNodes) { //Posiciones mayores a la cantidad de elementos
+            throw new Exception("Esta posicion no es valida");
+        } else {
+            //Mover temp hasata llegar al nodo deseado
+            while (cont < pos) {
+                temp = temp.getSiguiente();
+                cont++;
             }
-            else{
-                //Posicion valida
-                cont--;
-               Nodo temp = inicio;
-                if (pos ==s) {
-                    
-                }
-            }
+            valor = temp.getValor();
+            System.out.println("El valor de la posición " + pos + " es: " + valor);
         }
-*/
+        return valor;
+
+    }
+}
