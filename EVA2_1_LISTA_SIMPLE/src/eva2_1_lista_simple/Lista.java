@@ -86,7 +86,7 @@ public int tamaLista(){
             throw new Exception("No puede insertarse un nodo en una posicion negativa");
         } else if (pos >= cantNodos)//posiciones mayores a la cantidad  de elementos
         {
-            throw new Exception(pos + " no es una possicion valida en la lista");
+            throw new Exception(pos + " No es una possicion valida en la lista");
         } else {
             Nodo nuevoNodo = new Nodo(valor);
             if (pos == 0) {//insertar al inicio de la lista

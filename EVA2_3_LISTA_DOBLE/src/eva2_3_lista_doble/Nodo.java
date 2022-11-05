@@ -9,7 +9,9 @@ public class Nodo {
     private Nodo siguiente;
     private Nodo previo;
     
-    
+    //Nuevo nodo al final de la lista
+    //El final de la lista se indica con null
+    //Por eso siguieente = null
     public Nodo() {
         this.siguiente = null;
         this.previo = null;
