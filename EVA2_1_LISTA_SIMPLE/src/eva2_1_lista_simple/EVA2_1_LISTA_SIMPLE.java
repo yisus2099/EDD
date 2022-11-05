@@ -18,7 +18,7 @@ public class EVA2_1_LISTA_SIMPLE {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         // TODO code application logic here
         Lista miLista1 = new Lista();
         Lista miLista2 = new Lista();
@@ -60,6 +60,30 @@ public class EVA2_1_LISTA_SIMPLE {
         System.out.println("Segunda Lista");
         miLista2.tamaLista();
 
+        try {
+            miLista1.InsertarEn(89, 0);
+            miLista2.InsertarEn(199, 0);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        System.out.println("Lista: ");
+        System.out.println("Primera lista");
+        miLista1.imprimir();
+        System.out.println("Segunda Lista");
+        miLista2.imprimir();
+
+        try {
+            miLista1.BorrarEn(5);
+            miLista2.BorrarEn(5);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        System.out.println("Lista: ");
+        System.out.println("Primera lista");
+        miLista1.imprimir();
+        System.out.println("Segunda Lista");
+        miLista2.imprimir();
     }
 
 }
