@@ -15,7 +15,7 @@ public class Lista {
     private Nodo fin;
     private int cont;
 
-    public Lista() {
+     public Lista() {
         this.inicio = null;//No hay nodos en la lista
         this.fin = null;
         this.cont = 0;//No hay nodos en la lista
@@ -70,10 +70,9 @@ public class Lista {
         cont++;
     }
 
-    public int tamaLista() {
-        return this.cont;
-    }
-
+public int tamaLista(){
+    return this.cont;
+}
 //Insertar en posisiciones no validads
     public void InsertarEn(int valor, int pos) throws Exception {
         int cantNodos = tamaLista();
@@ -178,4 +177,5 @@ public class Lista {
         }
         return Valor;
     }
+   
 }

@@ -21,7 +21,6 @@ public class EVA2_1_LISTA_SIMPLE {
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
         Lista miLista1 = new Lista();
-        Lista miLista2 = new Lista();
 
         //Elementos de la lista
         miLista1.agregar(10);//0
@@ -31,22 +30,11 @@ public class EVA2_1_LISTA_SIMPLE {
         miLista1.agregar(50);//4
         miLista1.agregar(60);//5
 
-        miLista2.agregar(1);
-        miLista2.agregar(2);
-        miLista2.agregar(3);
-        miLista2.agregar(4);
-        miLista2.agregar(5);
-        miLista2.agregar(6);
-        miLista2.agregar(7);
-        miLista2.agregar(8);
-        miLista2.agregar(9);
-        miLista2.agregar(10);
-
         System.out.println("Lista: ");
         System.out.println("Primera lista");
         miLista1.imprimir();
-        System.out.println("Segunda Lista");
-        miLista2.imprimir();
+        miLista1.tamaLista();
+     
 
         /*
          // Agregamos grandes cantidades de datos
@@ -54,36 +42,27 @@ public class EVA2_1_LISTA_SIMPLE {
          miLista1.agregar(i);
          } 
          */
-        System.out.println("Contar nodos: ");
-        System.out.println("Primera lista");
-        miLista1.tamaLista();
-        System.out.println("Segunda Lista");
-        miLista2.tamaLista();
+       
 
         try {
             miLista1.InsertarEn(89, 0);
-            miLista2.InsertarEn(199, 0);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
         System.out.println("Lista: ");
         System.out.println("Primera lista");
         miLista1.imprimir();
-        System.out.println("Segunda Lista");
-        miLista2.imprimir();
 
         try {
             miLista1.BorrarEn(5);
-            miLista2.BorrarEn(5);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
+        System.out.println("------");
         System.out.println("Lista: ");
         System.out.println("Primera lista");
         miLista1.imprimir();
-        System.out.println("Segunda Lista");
-        miLista2.imprimir();
     }
 
 }
