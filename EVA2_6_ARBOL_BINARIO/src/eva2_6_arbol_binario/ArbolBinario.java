@@ -38,4 +38,44 @@ public class ArbolBinario {
             System.out.println("ELEMENTO REPETIDO");
         }
     }
+
+    public void inOrder() {
+        inOrderRecu(root);
+        System.out.println("");
+    }
+
+    private void inOrderRecu(Nodo nodo) {
+        if (nodo != null) {
+            inOrderRecu(nodo.getIzquierdo());
+            System.out.print(nodo.getValor() + " - ");
+            inOrderRecu(nodo.getDerecho());
+        }
+    }
+
+    public void preOrder() {
+        preOrderRecu(root);
+        System.out.println("");
+    }
+
+    private void preOrderRecu(Nodo nodo) {
+        if (nodo != null) {
+            System.out.print(nodo.getValor() + " - ");
+            preOrderRecu(nodo.getIzquierdo());
+            preOrderRecu(nodo.getDerecho());
+        }
+    }
+
+    public void postOrder() {
+        postOrderRecu(root);
+        System.out.println("");
+    }
+
+    private void postOrderRecu(Nodo nodo) {
+        if (nodo != null) {
+            postOrderRecu(nodo.getIzquierdo());
+            postOrderRecu(nodo.getDerecho());
+            System.out.print(nodo.getValor() + " - ");
+        }
+    }
+
 }
