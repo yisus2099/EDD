@@ -67,7 +67,7 @@ public class ListaDoble {
         cont++;
     }
 
-    public void InsertarEn(int valor, int pos) throws Exception {  //Modificado
+public void InsertarEn(int valor, int pos) throws Exception {  
 
         int cantNodos = tamaLista();
 
@@ -76,7 +76,7 @@ public class ListaDoble {
             throw new Exception("No puede insertarse un nodo en una posicion negativa");
         } else if (pos >= cantNodos)//posiciones mayores a la cantidad  de elementos
         {
-            throw new Exception(pos + " No es una possicion valida en la lista");
+            throw new Exception(pos + " No es una posicion valida en la lista");
         } else {
             Nodo nuevoNodo = new Nodo(valor);
             if (pos == 0) {//Insertar al inicio de la lista
@@ -102,8 +102,7 @@ public class ListaDoble {
 
     public void BorrarEn(int pos) throws Exception {
         int cantNodos = tamaLista();
-        if (pos < 0)// posiciones negativas
-        {
+        if (pos < 0){// posiciones negativas 
             throw new Exception("No se pueden eliminar nodos de porsiciones negativas");
         } else if (pos >= cantNodos) {//posiciones mayores a la cantidad  de elementos
             throw new Exception("Esa posicion no es válida en la lista");
@@ -154,12 +153,9 @@ public class ListaDoble {
             while (cont < (pos)) {
                 temp = temp.getSiguiente();
                 cont++;
-
             }
             Valor = temp.getValor();
-
         }
         return Valor;
     }
-   
 }
