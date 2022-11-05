@@ -79,7 +79,7 @@ public class MyStack {
         }
     }
     
-    public Integer pop() throws Exception{
+    public Integer Pop() throws Exception{
         //Verificar si la lista esta vacia
         //Si no esta vacia entonces que regrese un valor
         if(listaVacia()){
