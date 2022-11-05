@@ -29,5 +29,4 @@ public class EVA2_5_STACK {
         }
         myStack.imprimir();
     }
-    
 }
