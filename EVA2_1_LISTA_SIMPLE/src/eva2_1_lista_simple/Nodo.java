@@ -13,9 +13,7 @@ public class Nodo {
     private int valor;
     private Nodo siguiente;
     
-    //POR DEFAULT, UN NUEVO NODO VA A AL FINAL DE LA LISTA
-    //EL FINAL DE LA LISTA SE MARCA CON UN NULL
-   
+  
     public Nodo() {
         this.siguiente = null;
     }
